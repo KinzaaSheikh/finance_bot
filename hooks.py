@@ -1,6 +1,8 @@
+# type: ignore
+
 from agents import Runner, RunHooks, Agent
 
-agent = Agent(
+agent: Agent = Agent(
     name="Assistant"
 )
 

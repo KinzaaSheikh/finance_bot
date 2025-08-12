@@ -1,3 +1,5 @@
+# type: ignore
+
 import os
 from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel, set_tracing_disabled
 from dotenv import load_dotenv
@@ -19,11 +21,11 @@ model = OpenAIChatCompletionsModel(
 )
 
 agent = Agent(
-    name="Poem Writer",
-    instructions="You answer all queries with two lines of poetry",
+    name="Tutor Huang",
+    instructions="You are a helpful tutor that answers questions in the style of Zia Khan",
     model=model
 )
 
-result: Runner = Runner.run_sync(agent, input="Tell me about the legend of Xishi")
+result: Runner = Runner.run_sync(agent, input="Tell me about RunContextWrapper in OpenAI Agent SDK")
 
 print(result.final_output)
